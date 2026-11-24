@@ -5,10 +5,10 @@ Personal portfolio website for **Mukesh K**, a final-year B.Tech Information Tec
 **Live site:** https://mukeshk25-dev.github.io/Mukesh-Portfolio/
 
 ## What's on the site
-- A 3D hero built with three.js: five stacked layers (`config`, `database`, `models`, `services`, `utils`) that mirror the architecture of Library Management System V2. They rotate and follow the cursor.
-- About, skills, projects, education, certificates and contact sections.
+- An interactive 3D hero built with three.js. It shows the five layers of Library Management System V2 (`config`, `database`, `models`, `services`, `utils`). Drag to rotate, and click a layer to see its real files and what it does.
+- A particle background, a terminal-style About section, projects, skills, education and certificates.
 - 3D tilt on project cards. Motion respects the reduced-motion setting.
-- Downloadable resume (`Resume.pdf`).
+- A print-friendly resume page (`resume.html`) with a "Print or save as PDF" button.
 
 Every skill and project on the page matches the resume and the public repositories on GitHub.
 
@@ -29,11 +29,11 @@ Then open `http://localhost:8000`.
 
 ```text
 Mukesh-Portfolio/
-├── index.html   # Page markup
-├── style.css    # Styling
-├── script.js    # Typing roles, scroll reveal, card tilt, three.js hero
-├── mukesh.jpg   # Profile photo
-├── Resume.pdf   # Downloadable resume
+├── index.html    # Page markup
+├── style.css     # Styling
+├── script.js     # Typing roles, scroll reveal, card tilt, three.js scenes
+├── resume.html   # Resume page
+├── mukesh.jpg    # Profile photo
 ├── LICENSE
 └── README.md
 ```
