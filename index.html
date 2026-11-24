@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mukesh K | Python Developer</title>
-<meta name="description" content="Mukesh K - final-year B.Tech Information Technology student building Python and MySQL projects. Open to Python Developer, Backend Developer and Software Engineer roles.">
+<meta name="description" content="Mukesh K, final-year B.Tech IT student. Python, OOP, MySQL and layered architecture. Open to Python Developer, Backend Developer and Software Engineer roles.">
+<meta name="theme-color" content="#020617">
 <meta property="og:title" content="Mukesh K | Python Developer">
 <meta property="og:description" content="Final-year B.Tech IT student. Python, OOP, MySQL, layered architecture.">
 <meta property="og:type" content="website">
@@ -12,16 +13,17 @@
 <script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
+<canvas id="bg" aria-hidden="true"></canvas>
 
 <header class="header"><div class="container navbar">
-  <div class="logo">Mukesh K</div>
+  <div class="logo">&lt;Mukesh K /&gt;</div>
   <ul class="nav-links">
-    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
   </ul>
 </div></header>
 
@@ -29,32 +31,75 @@
   <div class="hero-left">
     <span class="hero-tag">Final-year B.Tech IT · 2027 graduate</span>
     <h1>Mukesh K</h1>
-    <h2 id="typing-text">Python Developer</h2>
-    <p class="hero-description">I build Python applications with OOP and MySQL, and I rebuilt my own Library Management System into a layered architecture to show I can improve code, not just write it.</p>
-    <p class="availability">Open to Python Developer, Backend Developer and Software Engineer roles</p>
+    <h2><span id="typing-text">Python Developer</span><span class="caret">|</span></h2>
+    <p class="hero-description">I build Python applications with OOP and MySQL. I rebuilt my own Library Management System into five clean layers, and you can explore them in 3D on the right.</p>
+    <p class="availability"><span class="dot"></span>Open to Python Developer, Backend Developer and Software Engineer roles</p>
     <div class="hero-buttons">
-      <a href="Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">Resume</a>
+      <a href="Resume.pdf" target="_blank" rel="noopener" class="btn btn-primary">Download resume</a>
       <a href="https://github.com/MukeshK25-dev" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
       <a href="https://www.linkedin.com/in/mukesh-kalyanasundaram-1480863b1/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
     </div>
   </div>
   <div class="hero-right">
-    <div id="stage" role="img" aria-label="3D model of the five layers of Library Management System V2"></div>
-    <div id="labels"></div>
+    <div id="stage" role="img" aria-label="Interactive 3D model of the five layers of Library Management System V2"></div>
+    <div id="labels" role="group" aria-label="Choose a layer"></div>
+    <div id="info" aria-live="polite"></div>
   </div>
 </div></section>
 
 <section id="about" class="section rv"><div class="container">
   <h2 class="section-title">About Me</h2>
   <div class="about">
-    <img src="mukesh.jpg" alt="Mukesh K" class="photo">
+    <div class="photo-wrap"><img src="mukesh.jpg" alt="Mukesh K" class="photo"></div>
     <div>
-      <div class="glass-card">I am a final-year Information Technology student with hands-on experience in Python, object-oriented programming, data structures and backend development. I like writing clean, readable code and turning small ideas into working applications. I am looking for a Software Developer or Software Engineer role where I can keep learning inside a strong engineering team.</div>
-      <div class="stats-grid">
-        <div class="stat-card"><h2>8.26</h2><p>CGPA out of 10</p></div>
-        <div class="stat-card"><h2>14136</h2><p>TCS CodeVita Season 13, global rank</p></div>
-        <div class="stat-card"><h2>3</h2><p>Public projects on GitHub</p></div>
+      <div class="terminal" aria-label="About me as a terminal session">
+        <div class="tbar"><i></i><i></i><i></i><span>mukesh@portfolio ~</span></div>
+<pre><b>$</b> whoami
+Mukesh K, final-year B.Tech Information Technology student
+<b>$</b> cat focus.txt
+Python · OOP · MySQL · layered architecture · clean, readable code
+<b>$</b> ls projects/
+library_management_v2/  library_management_v1/  student_registration_system/
+<b>$</b> cat goal.txt
+Python Developer / Backend Developer / Software Engineer, class of 2027
+<b>$</b> <span class="caret">_</span></pre>
       </div>
+      <div class="stats-grid">
+        <div class="stat-card"><h2 data-n="8.26">8.26</h2><p>CGPA out of 10</p></div>
+        <div class="stat-card"><h2 data-n="14136">14136</h2><p>TCS CodeVita Season 13, global rank</p></div>
+        <div class="stat-card"><h2 data-n="3">3</h2><p>Public Python projects</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects" class="section rv"><div class="container">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">Three Python projects that show a clear progression: a command-line app with JSON storage, a MySQL app, and that MySQL app rebuilt into layers.</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-status">Latest</div>
+      <h3>Library Management System V2</h3>
+      <p>A modular library system with full CRUD on MySQL, refactored from V1 into config, database, models, services and utils layers.</p>
+      <ul><li>Book model class, with validation on every field before it reaches the database</li><li>Parameterized SQL queries and duplicate ID checks</li><li>Database credentials read from environment variables</li></ul>
+      <div class="tech-tags"><span>Python</span><span>MySQL</span><span>OOP</span><span>CRUD</span></div>
+      <div class="project-buttons"><a href="https://github.com/MukeshK25-dev/Library_Management_System_V2" target="_blank" rel="noopener">View on GitHub</a></div>
+    </div>
+    <div class="project-card">
+      <div class="project-status done">Completed</div>
+      <h3>Library Management System V1</h3>
+      <p>The original menu-driven version with complete CRUD on MySQL, built as one script per operation.</p>
+      <ul><li>The starting point that V2 was refactored from</li><li>Kept public to show the before and after in code organization</li></ul>
+      <div class="tech-tags"><span>Python</span><span>MySQL</span><span>CRUD</span></div>
+      <div class="project-buttons"><a href="https://github.com/MukeshK25-dev/Library_Management_System_V1" target="_blank" rel="noopener">View on GitHub</a></div>
+    </div>
+    <div class="project-card">
+      <div class="project-status done">Completed</div>
+      <h3>Student Registration System</h3>
+      <p>A menu-driven command-line app for managing student records, with a Student class and JSON storage.</p>
+      <ul><li>Duplicate ID checks on add and update</li><li>Handles ValueError, FileNotFoundError and JSONDecodeError</li><li>Loads records on startup and saves after every change</li></ul>
+      <div class="tech-tags"><span>Python 3</span><span>OOP</span><span>JSON</span><span>CLI</span></div>
+      <div class="project-buttons"><a href="https://github.com/MukeshK25-dev/Student-Registration-System" target="_blank" rel="noopener">View on GitHub</a></div>
     </div>
   </div>
 </div></section>
@@ -66,37 +111,13 @@
     <div class="skill-box"><h3>Core Concepts</h3><span>OOP</span><span>CRUD operations</span><span>Exception handling</span><span>Modular architecture</span><span>File I/O (JSON)</span></div>
     <div class="skill-box"><h3>Tools</h3><span>GitHub</span><span>VS Code</span><span class="soft">Generative AI (concepts)</span></div>
   </div>
-  <p class="section-subtitle" style="margin-top:25px">Dashed tags are areas where I know the fundamentals and am still building depth.</p>
-</div></section>
-
-<section id="projects" class="section rv"><div class="container">
-  <h2 class="section-title">Projects</h2>
-  <p class="section-subtitle">Three Python projects that show a clear progression: a command-line app with JSON storage, a MySQL app, and that MySQL app rebuilt into layers.</p>
-  <div class="projects-grid">
-    <div class="project-card">
-      <div class="project-status">Latest</div>
-      <h3>Library Management System V2</h3>
-      <p>A modular library system with full CRUD and a MySQL database, refactored from V1 into config, database, models, services and utils layers.</p>
-      <ul><li>Book model class with input validation and duplicate ID checks</li><li>Search, update quantity and delete operations</li><li>Credentials kept in environment variables, not in code</li></ul>
-      <div class="tech-tags"><span>Python</span><span>MySQL</span><span>OOP</span><span>CRUD</span></div>
-      <div class="project-buttons"><a href="https://github.com/MukeshK25-dev/Library_Management_System_V2" target="_blank" rel="noopener">View Project</a></div>
-    </div>
-    <div class="project-card">
-      <div class="project-status">Completed</div>
-      <h3>Library Management System V1</h3>
-      <p>The original menu-driven version with complete CRUD on a MySQL database, built as one script per operation.</p>
-      <ul><li>The starting point that V2 was refactored from</li><li>Kept public to show the before and after in code organization</li></ul>
-      <div class="tech-tags"><span>Python</span><span>MySQL</span><span>CRUD</span></div>
-      <div class="project-buttons"><a href="https://github.com/MukeshK25-dev/Library_Management_System_V1" target="_blank" rel="noopener">View Project</a></div>
-    </div>
-    <div class="project-card">
-      <div class="project-status">Completed</div>
-      <h3>Student Registration System</h3>
-      <p>A menu-driven command-line app for managing student records, with a Student class and JSON storage.</p>
-      <ul><li>Duplicate ID checks on add and update</li><li>Handles ValueError, FileNotFoundError and JSONDecodeError</li><li>Loads records on startup and saves after every change</li></ul>
-      <div class="tech-tags"><span>Python 3</span><span>OOP</span><span>JSON</span><span>CLI</span></div>
-      <div class="project-buttons"><a href="https://github.com/MukeshK25-dev/Student-Registration-System" target="_blank" rel="noopener">View Project</a></div>
-    </div>
+  <p class="section-subtitle" style="margin:24px auto 0">Dashed tags are areas where I know the fundamentals and am still building depth.</p>
+  <h3 class="sub">What my code shows</h3>
+  <div class="practice">
+    <div><b>Layered design</b><p>V2 separates config, database, models, services and utils.</p></div>
+    <div><b>Safe queries</b><p>SQL uses parameters, not string building.</p></div>
+    <div><b>Input validation</b><p>Each field is checked before it is saved.</p></div>
+    <div><b>No secrets in code</b><p>Credentials come from a local .env file.</p></div>
   </div>
 </div></section>
 
@@ -129,12 +150,12 @@
 </div></section>
 
 <footer><div class="footer-content">
-  <h3>Mukesh K</h3>
+  <h3>&lt;Mukesh K /&gt;</h3>
   <p>Python Developer · Thanjavur, Tamil Nadu</p>
   <p class="copyright">© 2026 Mukesh K</p>
 </div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
